@@ -17,7 +17,7 @@ public class e_02_03 {
 		//演習2-3を実施するためint型整数値を読み込ませる。
 		int repetitionInput = stdIn.nextInt();
 		
-		//演習2-3を実施するため変数に代入される値ををのまま表示させる。
+		//演習2-3を実施するため変数に代入される値をそのまま表示させる。
 		System.out.print(repetitionInput + "と入力しましたね。");		
 	}
 
