@@ -8,16 +8,11 @@ public class e_02_02 {
 	
 	public static void main(String[] args) {
 		
-		//演習2-2を実施するためint型の変数を三つ用意する。
-		int firstNumber;           // firstNumberはint型の変数
-		int secondNumber;          // secondNumberはint型の変数
-		int thirdNumber;           // thirdNumberはint型の変数
-
-		//演習2-2を実施するためint型の変数に整数を代入する。
-		firstNumber = 10;            // firstNumberに10を代入する
-		secondNumber = 20;           // secondNumberに20を代入する
-		thirdNumber = 30;            // thirdNumberに30を代入する
-
+		//int型の変数に初期値を設定する。
+		int firstNumber = 10;           // firstNumberを初期化する
+		int secondNumber = 20;          // secondNumberを初期化する
+		int thirdNumber = 30;           // thirdNumberを初期化する
+		
 		//演習2-2を実施するため合計を求めるプログラムを作成する。
 		System.out.println("firstNumber～thirdNumberの合計は"
 							+ (firstNumber + secondNumber + thirdNumber) + "です。");
