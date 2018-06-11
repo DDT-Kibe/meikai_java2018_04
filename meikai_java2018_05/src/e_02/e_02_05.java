@@ -11,17 +11,17 @@ public class e_02_05 {
 
 	public static void main(String[] args) {
 
-		//演習2-5を実施するためキーボードから値を読み込ませる。
+		//演習2-5を実施するため、キーボードからの入力を受けつけられるようにする。
 		Scanner inKeyboard = new Scanner(System.in);
 
 		//タイトルを表示させ、1回目の入力を促す。
 		System.out.print("最初の値：");
-		//演習2-5を実施するため、double型の1つ目を用意する。
+		//1回目の入力に対して、小数点以下の部分をもつ値を取得できるようにする。
 		double firstNumber = inKeyboard.nextDouble();
 
 		//タイトルを表示させ、2回目の入力を促す。
 		System.out.print("　次の値：");
-		//演習2-5を実施するため、double型の2つ目を用意する。
+		//2回目の入力に対して、小数点以下の部分をもつ値を取得できるようにする。
 		double secondNumber = inKeyboard.nextDouble();
 
 		//演習2-5を実施するため、入力された2つの実数の合計を求める。
