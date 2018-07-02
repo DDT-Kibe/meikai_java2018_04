@@ -16,13 +16,17 @@ public class e_02_09 {
 
 		//乱数を生成するための用意をする。
 	    Random randomNumber = new Random();
+	    //演習2-9②で指定された範囲を宣言する。
+	    final int rangeNumberOne = 10;
+	    //演習2-9③で指定された範囲を宣言する。
+	    final int rangeNumberTwo = 2;
 
 	    //実数値で乱数を生成する。       …部品1
 	    double componentNumberOne = randomNumber.nextDouble();
-	    //整数値で0～9の乱数を生成する。 …部品2
-	    int componentNumberTwo = randomNumber.nextInt(10);
-	    //整数値で0～1の乱数を生成する。 …部品3
-	    int componentNumberThree = randomNumber.nextInt(2);
+	    //演習2-9②の範囲で乱数を生成する。 …部品2
+	    int componentNumberTwo = randomNumber.nextInt(rangeNumberOne);
+	    //演習2-9③の範囲で乱数を生成する。 …部品3
+	    int componentNumberThree = randomNumber.nextInt(rangeNumberTwo);
 
 	    //演習2-9①を実施するために部品1を表示する。
 		System.out.println("① 0.0以上1.0未満の実数値…" + componentNumberOne);
