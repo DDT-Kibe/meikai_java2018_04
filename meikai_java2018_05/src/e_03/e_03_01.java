@@ -20,13 +20,14 @@ public class e_03_01 {
 		int integerValue = inKeyboard.nextInt();
 
 		//入力された整数値が正の場合、
-		if(integerValue > 0)
+		if(integerValue > 0) {
 			//絶対値として値をそのまま表示する。
 			System.out.println("その絶対値は" + integerValue + "です。");
-
+		}
 		//入力された整数値が負、もしくは0の場合、
-		else
+		else {
 			//値を反転し絶対値として表示する。
 			System.out.println("その絶対値は" + (-integerValue) + "です。");
+		}
 	}
 }
