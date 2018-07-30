@@ -21,16 +21,21 @@ public class e_03_05 {
         //入力された値を取得する。
         int integerValue = inKeyboard.nextInt();
 
+        //割る数を初期値で設定する。
+        final int divisionNumber = 5;
+        //割り切れるか否かの判断で使用する値を初期値で設定する。
+        final int numberDivisible = 0;
+
         //正でない値を読み込んだ場合、
-        if (integerValue < 0) {
+        if (integerValue <= 0) {
             //『正でない値が入力されました』を表示する。
             System.out.println("正でない値が入力されました");
         //整数値が5で割り切れる場合、
-        }else if (integerValue % 5 == 0) {
+        } else if (integerValue % divisionNumber == numberDivisible) {
             //『その値は5で割り切れます』を表示する。
             System.out.println("その値は5で割り切れます");
         //整数値が5で割り切れない場合、
-        }else if (integerValue % 5 !=0 ) {
+        } else if (integerValue % divisionNumber != numberDivisible) {
             //『その値は5で割り切れません』を表示する。
             System.out.println("その値は5で割り切れません");
         }
