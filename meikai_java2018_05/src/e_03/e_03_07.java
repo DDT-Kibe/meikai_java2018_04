@@ -7,7 +7,7 @@ import java.util.Scanner;
  *          のいずれかを表示するプログラムを作成せよ。
  *          ※正でない値を読み込んだ場合は、『正でない値が入力されました』と表示すること。
  * 作成者：岐部 佳織
- * 作成日：2018年7月■日
+ * 作成日：2018年8月1日
  */
 public class e_03_07 {
 
@@ -25,15 +25,10 @@ public class e_03_07 {
         final int divisionNumber = 3;
         //割り切れるか否かの判断で使用する値を初期値で設定する。
         final int numberDivisible = 0;
-
-
         //「余りは1」の判断で使用する値を初期値で設定する。
-        //変数名考え中
-        final int ccc = 1;
+        final int surplusJudgmentOne = 1;
         //「余りは2」の判断で使用する値を初期値で設定する。
-        //変数名考え中
-        final int ddd = 2;
-
+        final int surplusJudgmentTwo = 2;
 
         //正でない値を読み込んだ場合、
         if (integerValue <= 0) {
@@ -44,11 +39,11 @@ public class e_03_07 {
             //『その値は3で割り切れます』を表示する。
             System.out.println("その値は3で割り切れます");
         //入力された値を3で割り余りが1の場合、
-        }else if (integerValue % divisionNumber == ccc ) {
+        }else if (integerValue % divisionNumber == surplusJudgmentOne ) {
             //『その値を3で割った余りは1です』を表示する。
             System.out.println("その値を3で割った余りは1です");
         //入力された値を3で割り余りが2の場合、
-        }else if (integerValue % divisionNumber == ddd ) {
+        }else if (integerValue % divisionNumber == surplusJudgmentTwo ) {
             //『その値を3で割った余りは2です』を表示する。
             System.out.println("その値を3で割った余りは2です");
         }
