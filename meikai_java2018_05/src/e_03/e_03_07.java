@@ -39,11 +39,11 @@ public class e_03_07 {
             //『その値は3で割り切れます』を表示する。
             System.out.println("その値は3で割り切れます");
         //入力された値を3で割り余りが1の場合、
-        }else if (integerValue % divisionNumber == surplusJudgmentOne ) {
+        }else if (integerValue % divisionNumber == surplusJudgmentOne) {
             //『その値を3で割った余りは1です』を表示する。
             System.out.println("その値を3で割った余りは1です");
         //入力された値を3で割り余りが2の場合、
-        }else if (integerValue % divisionNumber == surplusJudgmentTwo ) {
+        }else if (integerValue % divisionNumber == surplusJudgmentTwo) {
             //『その値を3で割った余りは2です』を表示する。
             System.out.println("その値を3で割った余りは2です");
         }
