@@ -34,23 +34,23 @@ public class e_03_08 {
 
         //タイトルを表示させ、点数の入力を促す。
         System.out.print("点数:");
-        //入力された値を取得する。
-        int integerValue = inKeyboard.nextInt();
+        //入力された点数を取得する。
+        int inputMark = inKeyboard.nextInt();
 
         //点数が不可の範囲内である場合、
-        if (integerValue >= START_WORST_MARK && integerValue <= END_WORST_MARK) {
+        if (inputMark >= START_WORST_MARK && inputMark <= END_WORST_MARK) {
             //不可である旨を表示する。
             System.out.println("不可");
         //点数が可の範囲内である場合、
-        }else if (integerValue >= START_USELESS_MARK && integerValue <= END_USELESS_MARK) {
+        }else if (inputMark >= START_USELESS_MARK && inputMark <= END_USELESS_MARK) {
             //可である旨を表示する。
             System.out.println("可");
         //点数が良の範囲内である場合、
-        }else if (integerValue >= START_GOOD_MARK && integerValue <= END_GOOD_MARK) {
+        }else if (inputMark >= START_GOOD_MARK && inputMark <= END_GOOD_MARK) {
             //良である旨を表示する。
             System.out.println("良");
         //点数が優の範囲内である場合、
-        }else if (integerValue >= START_GREAT_MARK && integerValue <= END_GREAT_MARK) {
+        }else if (inputMark >= START_GREAT_MARK && inputMark <= END_GREAT_MARK) {
             //優である旨を表示する。
             System.out.println("優");
         }
