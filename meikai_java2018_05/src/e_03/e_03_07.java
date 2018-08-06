@@ -21,7 +21,7 @@ public class e_03_07 {
         final int SURPLUS_JUDGMENT_ONE = 1;
         //「余りは2」の判断で使用する値を初期値で設定する。
         final int SURPLUS_JUDGMENT_TWO = 2;
-        
+
         //キーボードからの入力を受け取る用意をする。
         Scanner inKeyboard = new Scanner(System.in);
 
@@ -32,19 +32,19 @@ public class e_03_07 {
 
         //正でない値を読み込んだ場合、
         if (integerValue <= 0) {
-            //『正でない値が入力されました』を表示する。
+            //値が正でない旨を表示する。
             System.out.println("正でない値が入力されました");
         //入力された値が3で割り切れる場合、
         }else if (integerValue % DIVISION_NUMBER == NUMBER_DIVISIBLE) {
-            //『その値は3で割り切れます』を表示する。
+            //3で割り切れる旨を表示する。
             System.out.println("その値は3で割り切れます");
         //入力された値を3で割り余りが1の場合、
         }else if (integerValue % DIVISION_NUMBER == SURPLUS_JUDGMENT_ONE) {
-            //『その値を3で割った余りは1です』を表示する。
+            //3で割ると余りは1である旨を表示する。
             System.out.println("その値を3で割った余りは1です");
         //入力された値を3で割り余りが2の場合、
         }else if (integerValue % DIVISION_NUMBER == SURPLUS_JUDGMENT_TWO) {
-            //『その値を3で割った余りは2です』を表示する。
+            //3で割ると余りは2である旨を表示する。
             System.out.println("その値を3で割った余りは2です");
         }
     }
