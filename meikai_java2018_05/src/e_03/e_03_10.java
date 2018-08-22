@@ -26,7 +26,7 @@ public class e_03_10 {
         int formerSubtraction = formerInteger - latterInteger;
         //整数値Ｂの方が大きい場合の差を計算する。
         int latterSubtraction = latterInteger - formerInteger;
-        //整数値Ａと整数値Ｂを比較し、差を計算する。、
+        //整数値Ａと整数値Ｂの差を絶対値で表示できるようにする。
         int calculationResult = (formerInteger > latterInteger ? (formerSubtraction) : (latterSubtraction));
 
         //整数値Ａと整数値Ｂの差を示す。
