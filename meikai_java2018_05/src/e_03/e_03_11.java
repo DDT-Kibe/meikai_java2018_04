@@ -32,7 +32,15 @@ public class e_03_11 {
         //整数値Ａと整数値Ｂの差を絶対値として算出し閾値と比較できるようにする。
         int calculationResult = (formerInteger > latterInteger ? (formerSubtraction) : (latterSubtraction));
 
-        //整数値Ａと整数値Ｂの差と閾値を比較し、その結果から指定されたコメント表示する。
-        System.out.println("それらの差は10" + (calculationResult <= THRESHOLD_VALUE ? "以下" : "以上") + "です");
+        //整数値Ａと整数値Ｂの差が、閾値以下であることを判定し、
+        if(calculationResult <= THRESHOLD_VALUE){
+            //整数値Ａと整数値Ｂの差が閾値以下である旨を表示する。
+            System.out.println("それらの差は10以下です");
+        //整数値Ａと整数値Ｂの差が閾値以下ではない場合、
+        }else{
+            //整数値Ａと整数値Ｂの差が閾値よりも大きい旨を表示する。
+            System.out.println("それらの差は11以上です");
+        //
+        }
     }
 }
