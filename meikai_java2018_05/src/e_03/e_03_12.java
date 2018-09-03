@@ -29,11 +29,15 @@ public class e_03_12 {
 
         //最小値を示す変数を設け、現在の最小値として一つ目の入力値を代入する。
         int minimumValue = firstInteger;
-        //二つ目の入力値が現在の最小値より小さい場合、二つ目の入力値を最小値を示す変数に代入する。
-        if(secondInteger < minimumValue) minimumValue = secondInteger;
-        //三つ目の入力値が現在の最小値より小さい場合、三つ目の入力値を最小値を示す変数に代入する。
-        if(thirdInteger < minimumValue) minimumValue = thirdInteger;
-
+        //二つ目の入力値が現在の最小値より小さい場合、
+        if(secondInteger < minimumValue) {
+            //最小値を示す変数に二つ目の入力値を代入する。
+            minimumValue = secondInteger;
+        //三つ目の入力値が現在の最小値より小さい場合、
+        }if(thirdInteger < minimumValue) {
+            //最小値を示す変数に三つ目の入力値を代入する。
+            minimumValue = thirdInteger;
+            }
         //どの入力値が最小値かを表示する。
         System.out.println("最小値は" + minimumValue + "です");
     }
