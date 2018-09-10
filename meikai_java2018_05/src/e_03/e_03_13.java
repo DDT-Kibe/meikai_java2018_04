@@ -28,10 +28,11 @@ public class e_03_13 {
         //入力された整数値を取得する。
         int thirdInteger = inKeyboard.nextInt();
 
-        //中央値を示す変数を設け、一つ目の入力値を代入する。
+        //中央値を示す変数を設け、一つ目の入力値で初期化する。
         int mediumValue = firstInteger;
+
         //一つ目の入力値が最小値である場合、
-        if (mediumValue < secondInteger && mediumValue < thirdInteger) {
+        if (firstInteger < secondInteger && firstInteger < thirdInteger) {
             //二つ目の入力値が三つ目の入力値以下であることを判定し、
             if (secondInteger <= thirdInteger) {
                 //trueの場合、中央値を示す変数に二つ目の入力値を代入する。
@@ -42,7 +43,7 @@ public class e_03_13 {
                 mediumValue = thirdInteger;
             }
             //一つ目の入力値が最大値である場合、
-        } else if (mediumValue > secondInteger && mediumValue > thirdInteger) {
+        } else if (firstInteger > secondInteger && firstInteger > thirdInteger) {
             //二つ目の入力値が三つ目の入力値以上であることを判定し、
             if (secondInteger >= thirdInteger) {
                 //trueの場合、中央値を示す変数に二つ目の入力値を代入する。
@@ -52,10 +53,9 @@ public class e_03_13 {
                 //中央値を示す変数に三つ目の入力値を代入する。
                 mediumValue = thirdInteger;
             }
-            //二つ目と三つ目の入力値のどちらか一方でも一つ目の入力値と同じ場合、変数には何もしない。
-        } else if (mediumValue == secondInteger || mediumValue == thirdInteger) {
+        } //一つ目の入力値が最小値または最大値以外の場合、一つ目の入力値は中央値であるといえる。
+          //（中央値を示す変数には何もしない）
 
-        }
         //中央値を表示する。
         System.out.println("中央値は" + mediumValue + "です");
     }
