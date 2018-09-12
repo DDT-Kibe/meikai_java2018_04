@@ -31,22 +31,22 @@ public class e_03_14 {
         int maximumValue;
         //整数ａが整数ｂよりも小さいことを判定し、
         if (variableIntegerA < variableIntegerB) {
-            //trueの場合、小さい方の値を示す変数に整数ａを代入し、
+            //整数ａが整数ｂよりも小さい場合、小さい方の値を示す変数に整数ａを代入し、
             minimumValue = variableIntegerA;
             //大きい方の値を示す変数に整数ｂを代入する。
             maximumValue = variableIntegerB;
-        //falseの場合、
-        }else {
+            //整数ａが整数ｂよりも大きい場合、
+        } else {
             //小さい方の値を示す変数に整数ｂを代入し、
             minimumValue = variableIntegerB;
             //大きい方の値を示す変数に整数ａを代入する。
             maximumValue = variableIntegerA;
         }
-        //表示をする際に整数ａと整数ｂが同じ値であるかを判定し、trueの場合、値が同じである旨を表示する。
+        //表示をする際に整数ａと整数ｂが同じ値であるかを判定し、同じ値である場合はその旨を表示する。
         System.out.println((variableIntegerA == variableIntegerB) ? "二つの値は同じです"
-                //falseの場合、小さい方の値を先に表示し、
+                //整数ａと整数ｂが異なる値の場合、小さい方の値を先に表示し、
                 : "小さい方の値は" + minimumValue + "です"
                 //次に大きい方の値を表示する。
-                + "\n大きい方の値は" + maximumValue + "です");
+                        + "\n大きい方の値は" + maximumValue + "です");
     }
 }
