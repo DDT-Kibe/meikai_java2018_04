@@ -30,27 +30,27 @@ public class e_03_16 {
         //作業用の変数を設ける。
         int temporaryVariable;
 
-        //最初に変数ａ・ｂの値を比較し、変数ａの値の方が小さいことを判定する。
-        if (IntegerValueA < IntegerValueB) {
-            //変数ａが変数ｂの値よりも小さい場合、作業用の変数に変数ａの値を代入する。
+        //最初に変数ａ・ｂの値を比較し、変数ａの値の方が大きいことを判定する。
+        if (IntegerValueA > IntegerValueB) {
+            //変数ａが変数ｂの値よりも大きい場合、作業用の変数に変数ａの値を代入する。
             temporaryVariable = IntegerValueA;
             //変数ａに変数ｂの値を代入する。
             IntegerValueA = IntegerValueB;
             //変数ｂに作業用として保存していた値を代入する。
             IntegerValueB = temporaryVariable;
         }
-        //次に変数ｂ・ｃの値を比較し、変数ｂの値の方が小さいことを判定する。
-        if (IntegerValueB < IntegerValueC) {
-            //変数ｂが変数ｃの値よりも小さい場合、作業用の変数に変数ｂの値を代入する。
+        //次に変数ｂ・ｃの値を比較し、変数ｂの値の方が大きいことを判定する。
+        if (IntegerValueB > IntegerValueC) {
+            //変数ｂが変数ｃの値よりも大きい場合、作業用の変数に変数ｂの値を代入する。
             temporaryVariable = IntegerValueB;
             //変数ｂに変数ｃの値を代入する。
             IntegerValueB = IntegerValueC;
             //変数ｃに作業用として保存していた値を代入する。
             IntegerValueC = temporaryVariable;
         }
-        //最後に変数ａ・ｂの値を再び比較し、変数ａの値の方が小さいことを判定する。
-        if (IntegerValueA < IntegerValueB) {
-            //変数ａが変数ｂの値よりも小さい場合、作業用の変数に変数ａの値を代入する。
+        //最後に変数ａ・ｂの値を再び比較し、変数ａの値の方が大きいことを判定する。
+        if (IntegerValueA > IntegerValueB) {
+            //変数ａが変数ｂの値よりも大きい場合、作業用の変数に変数ａの値を代入する。
             temporaryVariable = IntegerValueA;
             //変数ａに変数ｂの値を代入する。
             IntegerValueA = IntegerValueB;
