@@ -58,7 +58,7 @@ public class e_03_16 {
             IntegerValueB = temporaryVariable;
         }
         //昇順でソートした旨を表示する。
-        System.out.println("\nａ≦ｂとなるようソートしました");
+        System.out.println("\n昇順となるようにソートしました");
         //変数ａ、変数ｂ、変数ｃの順に表示する。
         System.out.println(IntegerValueA + "\n" + IntegerValueB + "\n" + IntegerValueC);
     }
