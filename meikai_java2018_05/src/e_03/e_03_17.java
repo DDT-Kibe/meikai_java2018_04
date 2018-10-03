@@ -25,9 +25,8 @@ public class e_03_17 {
         Random randomNumber = new Random();
         //0～2の乱数を生成し変数に代入する。
         int rockPaperScissors = randomNumber.nextInt(VALUE_RANGE);
-        //switch文で生成した乱数の評価をしていく。
 
-        //生成された乱数について判定していく。
+        //switch文で生成された乱数について評価していく。
         switch (rockPaperScissors) {
         //生成された値が0のとき、
         case FIRST_INTEGER:
@@ -45,6 +44,10 @@ public class e_03_17 {
         case THIRD_INTEGER:
             //「パー」を表示し、
             System.out.println("パー");
+            //処理を抜ける。
+            break;
+        //指定された値に当てはまらないとき、
+        default:
             //処理を抜ける。
             break;
         }
