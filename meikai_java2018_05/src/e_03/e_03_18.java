@@ -86,6 +86,12 @@ public class e_03_18 {
             System.out.println("季節は冬です");
             //処理を抜ける。
             break;
+        //指定された値に当てはまらないとき、
+        default:
+            //月に該当しない旨を表示する。
+            System.out.println("その月はありません。");
+            //処理を抜ける。
+            break;
         }
     }
 }
