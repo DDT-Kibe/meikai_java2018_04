@@ -35,13 +35,14 @@ public class e_04_02 {
             //入力された値を取得する。
             answeredNumber = inKeyboard.nextInt();
             //入力値が問題となる値より大きい場合、
-            if (answeredNumber > questionNumber)
+            if (answeredNumber > questionNumber) {
                 //問題となる値は入力値よりも小さい旨のヒントを表示する。
                 System.out.print("もっと小さいよ");
-            //入力値が問題となる値より小さい場合、
-            else if (answeredNumber < questionNumber)
+                //入力値が問題となる値より小さい場合、
+            } else if (answeredNumber < questionNumber) {
                 //問題となる値は入力値よりも大きい旨のヒントを表示する。
                 System.out.print("もっと大きいよ");
+            }
             //入力値が問題となる値と異なる場合は繰り返し処理を行う。
         } while (answeredNumber != questionNumber);
 
