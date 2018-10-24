@@ -37,3 +37,10 @@ public class e_04_04 {
         System.out.println("現在のcountDownは" + countDown + "です");
     }
 }
+/*※変数countDownの値が何故-1になるのかの説明…
+ *  ①どの数字までカウントダウンするかを初期値で0で設定している。
+ *  ②2つ目のwhile文の最後の処理で、変数countDownの値をデクリメントしている。
+ *  ③変数countDownが0になるまで値を表示しデクリメントする処理が繰り返される。
+ *  ④変数countDownが-1になったときにwhile文の条件（値が0以上の場合）から外れるため、処理を抜ける。
+ *  上記4点の結果、while文の処理を抜けた時点での変数countDownは-1である。
+ */
