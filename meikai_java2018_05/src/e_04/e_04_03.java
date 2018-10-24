@@ -23,31 +23,29 @@ public class e_04_03 {
         System.out.print("整数②：");
         //入力された整数値を取得する。
         int secondInteger = inKeyboard.nextInt();
-        //小さい値を示す変数を設け、一つ目の整数値を代入する。
-        int smallInteger = firstInteger;
-        //大きい値を示す変数を設け、二つ目の整数値を代入する。
-        int largeInteger = secondInteger;
+        //作業用の変数を設ける。
+        int temporaryVariable;
 
         //一つ目と二つ目の値を比較し一つ目の値の方が大きい場合、
         if (firstInteger > secondInteger) {
+            //作業用の変数に一つ目の値を代入する
+            temporaryVariable = firstInteger;
             //小さい値を示す変数に二つ目の値を代入する。
-            smallInteger = secondInteger;
+            firstInteger = secondInteger;
             //大きい値を示す変数に二つ目の値を代入する。
-            largeInteger = firstInteger;
+            secondInteger = temporaryVariable;
         }
-        //値を表示しする際に使用する変数を設け、小さい方の値を代入する。
-        int displayNumber = smallInteger;
         //do文を記述していく。
         do {
             //小さい値を表示する。
-            System.out.print(displayNumber);
+            System.out.print(firstInteger);
             //小さい値に1を加算する。
-            displayNumber = displayNumber + ADDING_NUMBER;
+            firstInteger = firstInteger + ADDING_NUMBER;
             //値の区切りとしてスペースを表示する。
             System.out.print(" ");
             //小さい値に1加算する処理を、大きい値と等しくなるまで繰り返す。
-        } while (displayNumber != largeInteger);
+        } while (firstInteger != secondInteger);
         //大きい方の値を表示する。
-        System.out.print(largeInteger);
+        System.out.print(secondInteger);
     }
 }
