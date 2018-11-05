@@ -28,11 +28,11 @@ public class e_04_03 {
 
         //一つ目と二つ目の値を比較し一つ目の値の方が大きい場合、
         if (firstInteger > secondInteger) {
-            //作業用の変数に一つ目の値を代入する
+            //作業用の変数に、一つ目の値を代入する。
             temporaryVariable = firstInteger;
-            //小さい値を示す変数に二つ目の値を代入する。
+            //一つ目の値を示す変数に、二つ目の値を代入する。
             firstInteger = secondInteger;
-            //大きい値を示す変数に二つ目の値を代入する。
+            //二つ目の値を示す変数に、作業用の変数に代入していた値を代入する。
             secondInteger = temporaryVariable;
         }
         //do文を記述していく。
