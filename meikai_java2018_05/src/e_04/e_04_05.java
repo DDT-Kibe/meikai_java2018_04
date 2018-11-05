@@ -28,9 +28,10 @@ public class e_04_05 {
             //入力値が初期値で設定した値以下の場合は処理を繰り返す。
         } while (x <= SPECIFIC_NUMBER);
         //入力値が初期値で設定した値以上の場合、
-        while (x >= SPECIFIC_NUMBER)
+        while (x >= SPECIFIC_NUMBER) {
             //xの値を表示する前にデクリメントする処理を繰り返す。
             System.out.println(--x);
+        }
     }
 }
 /*検討結果
