@@ -1,6 +1,7 @@
 package e_04;
 
 import java.util.Scanner;
+
 /*
  * 演習4-6-1：読み込んだ値が1未満であれば改行文字を出力しないように
  *            List4-7を書きかえたプログラムを作成せよ。
@@ -23,15 +24,15 @@ public class e_04_06_1 {
         int repeatValue = THRESHOLD_VALUE;
         //変数repeatValueに代入している値よりも入力値の方が大きい場合、
         while (repeatValue < requestedValue) {
-            //''の文字を表示する。
+            //「*」を表示する。
             System.out.print('*');
             //変数repeatValueに代入している値をインクリメントする。
             repeatValue++;
         }
         //入力値が初期値よりも大きい場合
-        if (requestedValue > THRESHOLD_VALUE ){
-        //改行文字を出力する。
-        System.out.println("\n");
+        if (requestedValue > THRESHOLD_VALUE) {
+            //改行文字を出力する。
+            System.out.println("\n");
         }
     }
 }
