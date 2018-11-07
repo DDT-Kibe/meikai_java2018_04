@@ -23,7 +23,7 @@ public class e_04_06_2 {
         int repeatValue = THRESHOLD_VALUE;
         //変数repeatValueに代入している値が入力値以下の値である場合、
         while (repeatValue <= requestedValue) {
-            //''の文字を表示する。
+            //「*」を表示する。
             System.out.print('*');
             //変数repeatValueに代入している値をインクリメントする。
             repeatValue++;
