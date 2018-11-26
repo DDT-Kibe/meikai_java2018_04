@@ -11,7 +11,9 @@ import java.util.Scanner;
 public class e_04_10 {
 
     public static void main(String[] args) {
-        //変数を設け繰り返し処理で表示回数を数えるため最初に代入する値、兼1未満かの判定で使用する値を設定する。
+        //定数を設け繰り返し処理で表示回数を数えるため最初に代入する値を設定する。
+        final int BEGINNING_NUMBER = 0;
+        //定数を設け1未満かの判定で使用する値（閾値）を設定する。
         final int THRESHOLD_VALUE = 0;
         //キーボードからの入力を受け取る用意をする。
         Scanner inKeyboard = new Scanner(System.in);
@@ -20,7 +22,7 @@ public class e_04_10 {
         //入力された値を取得する。
         int requestedValue = inKeyboard.nextInt();
         //repeatValueにまず0を代入する。repeatValueより入力値の方が大きい間は、repeatValueの値をインクリメントし、
-        for (int repeatValue = THRESHOLD_VALUE; repeatValue < requestedValue; repeatValue++)
+        for (int repeatValue = BEGINNING_NUMBER; repeatValue < requestedValue; repeatValue++)
             //「*」を表示する。
             System.out.print('*');
         //入力値が閾値よりも大きい場合、
