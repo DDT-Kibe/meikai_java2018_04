@@ -22,12 +22,14 @@ public class e_04_10 {
         //入力された値を取得する。
         int requestedValue = inKeyboard.nextInt();
         //repeatValueにまず0を代入する。repeatValueより入力値の方が大きい間は、repeatValueの値をインクリメントし、
-        for (int repeatValue = BEGINNING_NUMBER; repeatValue < requestedValue; repeatValue++)
+        for (int repeatValue = BEGINNING_NUMBER; repeatValue < requestedValue; repeatValue++) {
             //「*」を表示する。
             System.out.print('*');
+        }
         //入力値が閾値よりも大きい場合、
-        if (requestedValue > THRESHOLD_VALUE)
+        if (requestedValue > THRESHOLD_VALUE) {
             //改行文字を表示する。
             System.out.println('\n');
+        }
     }
 }
