@@ -28,7 +28,8 @@ public class e_04_12 {
             requestedValue = inKeyboard.nextInt();
             //入力値が正の整数値でない場合は処理を繰り返す。
         } while (requestedValue <= THRESHOLD_VALUE);
-        //countUpにまずカウントアップするはじめの値を代入する。countUpが入力値以下の間は、countUpの値をインクリメントし、
+        //入力値に到達するまでカウントアップを繰り返す処理をするために
+        //作業用の変数countUpを設け、countUpが入力値以下の間は下記の処理を行う。
         for (int countUp = START_NUMBER; countUp <= requestedValue; countUp++) {
             //countUpの値を表示する。
             System.out.println(countUp);
