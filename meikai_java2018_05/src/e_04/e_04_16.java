@@ -46,7 +46,6 @@ public class e_04_16 {
                 //5個目を表示したら改行する。
                 System.out.println();
                 //5個目以外のときは何もしない。
-            } else {
             }
         }
     }
