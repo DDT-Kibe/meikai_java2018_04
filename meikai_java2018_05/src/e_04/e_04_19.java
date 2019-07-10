@@ -50,33 +50,31 @@ public class e_04_19 {
                 System.out.print("季節を求めます。\n何月ですか？");
                 //入力された月の値を取得する。
                 requestedMonth = inKeyboard.nextInt();
-
-                //3～5の月で求められた場合
-                if (requestedMonth >= SPRING_MARCH && requestedMonth <= SPRING_MAY) {
-                    //その季節が春であることを表示する。
-                    System.out.println("それは春です。");
-                    //6～8の月で求められた場合
-                } else if (requestedMonth >= SUMMER_JUNE && requestedMonth <= SUMMER_AUGUST) {
-                    //その季節が夏であることを表示する。
-                    System.out.println("それは夏です。");
-                    //9～11の月で求められた場合
-                } else if (requestedMonth >= AUTUMN_SEPTEMBER && requestedMonth <= AUTUMN_NOVEMBER) {
-                    //その季節が秋であることを表示する。
-                    System.out.println("それは秋です。");
-                    //12・1・2の月で求められた場合
-                } else if (requestedMonth == WINTER_DECEMBER ||
-                        requestedMonth == WINTER_JANUARY ||
-                        requestedMonth == WINTER_FEBRUARY) {
-                    //その季節が冬であることを表示する。
-                    System.out.println("それは冬です。");
-                }
                 //暦に該当しない月を入力された場合
                 if (requestedMonth < WINTER_JANUARY || requestedMonth > WINTER_DECEMBER) {
-                    //暦にあたる月を入力してもらうようアナウンスする。
+                    //1～12を入力してもらうようアナウンスする。
                     System.out.println("1～12までの数字を入力してください。");
                 }
                 //暦に該当しない月を入力されたら再度タイトルを表示し処理を繰り返す。
             } while (requestedMonth < WINTER_JANUARY || requestedMonth > WINTER_DECEMBER);
+
+            //3～5の月で求められた場合
+            if (requestedMonth >= SPRING_MARCH && requestedMonth <= SPRING_MAY) {
+                //その季節が春であることを表示する。
+                System.out.println("それは春です。");
+                //6～8の月で求められた場合
+            } else if (requestedMonth >= SUMMER_JUNE && requestedMonth <= SUMMER_AUGUST) {
+                //その季節が夏であることを表示する。
+                System.out.println("それは夏です。");
+                //9～11の月で求められた場合
+            } else if (requestedMonth >= AUTUMN_SEPTEMBER && requestedMonth <= AUTUMN_NOVEMBER) {
+                //その季節が秋であることを表示する。
+                System.out.println("それは秋です。");
+                //それ以外（12・1・2の月）で求められた場合
+            } else {
+                //その季節が冬であることを表示する。
+                System.out.println("それは冬です。");
+            }
 
             //再度季節を求めるか入力者へ問う。
             System.out.print("もう一度？  1…Yes／0…No：");
