@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 作成日：2019年7月22日
  */
 
-//直角三角形の直角が左上側にできあがるプログラム。
+//直角三角形の直角が右上側にできあがるプログラム。
 public class e_04_21_02 {
 
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class e_04_21_02 {
         Scanner inKeyboard = new Scanner(System.in);
         //入力値を受け取る用意をする。
         int inputSteps;
-        //入力値について判定する条件式用の変数を用意する。
+        //入力値として適切かを判定する条件式を代入する変数を用意する。
         boolean inputJudgement;
 
         //入力値が適切かを判定する。
@@ -32,13 +32,15 @@ public class e_04_21_02 {
             System.out.print("直角三角形の直角を右上に表示します。\n段数：");
             //入力された値を取得する。
             inputSteps = inKeyboard.nextInt();
-            //適切な入力値を判定する。
+            //入力値として適切かを判定する。
             inputJudgement = (inputSteps < THRESHOLD_VALUE);
             //入力値が2未満の場合
             if (inputJudgement) {
                 //2以上の数を入力するようアナウンスする。
                 System.out.println("\n2以上の整数値を入力して下さい。");
+                //入力値が2以上の場合
             } else {
+                //次の三角形を表示する処理に移る。
                 inputJudgement = false;
             }
             //入力値が2未満の場合は再度タイトルを表示する。
