@@ -57,11 +57,11 @@ public class e_04_25_02 {
             System.out.print("整数：");
             //入力された値を取得する。、
             int additionNumber = inKeyboard.nextInt();
-            //0が入力された場合、
+            //合計値が1000を超える入力値になる場合、
             if (sumTotal + additionNumber > UPPER_LIMIT) {
-                //加算する数の入力を促す。
+                //1000を超えたことをアナウンスする。
                 System.out.println("合計が" + UPPER_LIMIT + "を超えました。");
-                //加算する数の入力を促す。
+                //最後の入力値は無視する旨を表示する。
                 System.out.println("最後の数値は無視します。");
                 //処理を抜ける。
                 break;
