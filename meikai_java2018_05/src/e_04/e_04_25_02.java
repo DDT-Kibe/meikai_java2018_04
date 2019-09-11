@@ -55,7 +55,7 @@ public class e_04_25_02 {
         for (int inputFrequency = START_VALUE; inputFrequency < firstInputNumber; inputFrequency++) {
             //加算する数の入力を促す。
             System.out.print("整数：");
-            //入力された値を取得する。、
+            //入力された値を取得する。
             int additionNumber = inKeyboard.nextInt();
             //合計値が1000を超える入力値になる場合、
             if (sumTotal + additionNumber > UPPER_LIMIT) {
