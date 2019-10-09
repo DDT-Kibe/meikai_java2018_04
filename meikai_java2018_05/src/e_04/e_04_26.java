@@ -25,7 +25,7 @@ public class e_04_26 {
         //入力値を受け取る用意をする。
         int firstInputNumber;
         //入力値として適切かを判定する条件式を代入する変数を用意する。
-        boolean inputJudgement;
+        boolean isInsufficientNumber;
 
         //入力値が適切かを判定する。
         do {
@@ -36,18 +36,14 @@ public class e_04_26 {
             //入力された値を取得する。
             firstInputNumber = inKeyboard.nextInt();
             //入力値が適切かを判定する。
-            inputJudgement = (firstInputNumber < THRESHOLD_VALUE);
+            isInsufficientNumber = (firstInputNumber < THRESHOLD_VALUE);
             //入力値が2未満の場合
-            if (inputJudgement) {
+            if (isInsufficientNumber) {
                 //2以上の数を入力するようアナウンスする。
                 System.out.println("\n2以上の整数値を入力して下さい。");
-                //入力値が2以上の場合
-            } else {
-                //合計値および平均値を算出する処理に移る。
-                inputJudgement = false;
             }
             //入力値が2未満の場合は再度質問を表示する。
-        } while (inputJudgement);
+        } while (isInsufficientNumber);
 
         //合計値用の変数を用意し初期化する。
         int sumTotal = START_VALUE;
