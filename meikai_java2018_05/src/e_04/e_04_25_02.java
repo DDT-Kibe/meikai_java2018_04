@@ -25,7 +25,7 @@ public class e_04_25_02 {
         //入力値を受け取る用意をする。
         int firstInputNumber;
         //入力値として適切かを判定する条件式を代入する変数を用意する。
-        boolean inputJudgement;
+        boolean isInsufficientNumber;
 
         //入力値が適切かを判定する。
         do {
@@ -36,22 +36,20 @@ public class e_04_25_02 {
             //入力された値を取得する。
             firstInputNumber = inKeyboard.nextInt();
             //入力値が適切かを判定する。
-            inputJudgement = (firstInputNumber < THRESHOLD_VALUE);
+            isInsufficientNumber = (firstInputNumber < THRESHOLD_VALUE);
             //入力値が2未満の場合
-            if (inputJudgement) {
+            if (isInsufficientNumber) {
                 //2以上の数を入力するようアナウンスする。
                 System.out.println("\n2以上の整数値を入力して下さい。");
-                //入力値が2以上の場合
-            } else {
-                //合計値および平均値を算出する処理に移る。
-                inputJudgement = false;
             }
             //入力値が2未満の場合は再度タイトルを表示する。
-        } while (inputJudgement);
+        } while (isInsufficientNumber);
 
-        //合計値用の変数を用意し初期化する。
+        //合計値算出用の変数を用意し初期化する。
         int sumTotal = START_VALUE;
-        //合計値算出のための入力回数が、加算する個数の値に到達するまで以下の処理を行う。
+        //入力回数を数えるための変数を用意し初期化する。
+        int inputTimes = START_VALUE;
+        //入力回数が、加算する個数の値に到達するまで以下の処理を行う。
         for (int inputFrequency = START_VALUE; inputFrequency < firstInputNumber; inputFrequency++) {
             //加算する数の入力を促す。
             System.out.print("整数：");
@@ -68,9 +66,11 @@ public class e_04_25_02 {
             }
             //合計値用に入力された値を加算する。
             sumTotal += additionNumber;
+            //入力回数をインクリメントする。
+            inputTimes++;
         }
-        //合計値を、加算する個数の値で割る。
-        double averageValue = ((double) sumTotal / firstInputNumber);
+        //平均値を算出する。
+        double averageValue = ((double) sumTotal / inputTimes);
         //合計値および平均値を表示する。
         System.out.println("合計は" + sumTotal + "です。\n平均は" + averageValue + "です。");
     }
