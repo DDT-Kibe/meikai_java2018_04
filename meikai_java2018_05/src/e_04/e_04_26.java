@@ -24,8 +24,6 @@ public class e_04_26 {
         Scanner inKeyboard = new Scanner(System.in);
         //入力値を受け取る用意をする。
         int firstInputNumber;
-        //入力値として適切かを判定する条件式を代入する変数を用意する。
-        boolean isInsufficientNumber;
 
         //入力値が適切かを判定する。
         do {
@@ -35,15 +33,13 @@ public class e_04_26 {
             System.out.print("何個加算しますか：");
             //入力された値を取得する。
             firstInputNumber = inKeyboard.nextInt();
-            //入力値が適切かを判定する。
-            isInsufficientNumber = (firstInputNumber < THRESHOLD_VALUE);
             //入力値が2未満の場合
-            if (isInsufficientNumber) {
+            if (firstInputNumber < THRESHOLD_VALUE) {
                 //2以上の数を入力するようアナウンスする。
                 System.out.println("\n2以上の整数値を入力して下さい。");
             }
             //入力値が2未満の場合は再度質問を表示する。
-        } while (isInsufficientNumber);
+        } while (firstInputNumber < THRESHOLD_VALUE);
 
         //合計値用の変数を用意し初期化する。
         int sumTotal = START_VALUE;
@@ -67,9 +63,16 @@ public class e_04_26 {
             //平均値を求める際の母数をインクリメントする。
             averageValue++;
         }
-        //平均値を求める。
-        double displayAverage = ((double) sumTotal / averageValue);
-        //合計値および平均値を表示する。
-        System.out.println("合計は" + sumTotal + "です。\n平均は" + displayAverage + "です。");
+        //入力値が全て負の数だった場合、
+        if (averageValue == START_VALUE) {
+            //計算はしない旨を表示する。
+            System.out.println("負の数しか入力されていないので計算はしません。");
+            //1回でも正の数が入力された場合、
+        } else {
+            //平均値を求める。
+            double displayAverage = ((double) sumTotal / averageValue);
+            //合計値および平均値を表示する。
+            System.out.println("合計は" + sumTotal + "です。\n平均は" + displayAverage + "です。");
+        }
     }
 }
