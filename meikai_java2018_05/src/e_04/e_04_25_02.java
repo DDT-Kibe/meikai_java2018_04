@@ -24,9 +24,6 @@ public class e_04_25_02 {
         Scanner inKeyboard = new Scanner(System.in);
         //入力値を受け取る用意をする。
         int firstInputNumber;
-        //入力値として適切かを判定する条件式を代入する変数を用意する。
-        boolean isInsufficientNumber;
-
         //入力値が適切かを判定する。
         do {
             //入力値を加算する旨を表示する。
@@ -35,15 +32,13 @@ public class e_04_25_02 {
             System.out.print("何個加算しますか：");
             //入力された値を取得する。
             firstInputNumber = inKeyboard.nextInt();
-            //入力値が適切かを判定する。
-            isInsufficientNumber = (firstInputNumber < THRESHOLD_VALUE);
             //入力値が2未満の場合
-            if (isInsufficientNumber) {
+            if (firstInputNumber < THRESHOLD_VALUE) {
                 //2以上の数を入力するようアナウンスする。
                 System.out.println("\n2以上の整数値を入力して下さい。");
             }
             //入力値が2未満の場合は再度タイトルを表示する。
-        } while (isInsufficientNumber);
+        } while (firstInputNumber < THRESHOLD_VALUE);
 
         //合計値算出用の変数を用意し初期化する。
         int sumTotal = START_VALUE;
@@ -55,12 +50,15 @@ public class e_04_25_02 {
             System.out.print("整数：");
             //入力された値を取得する。
             int additionNumber = inKeyboard.nextInt();
-            //合計値が1000を超える入力値になる場合、
+            //入力値が累計で上限を超える場合、
             if (sumTotal + additionNumber > UPPER_LIMIT) {
-                //1000を超えたことをアナウンスする。
-                System.out.println("合計が" + UPPER_LIMIT + "を超えました。");
-                //最後の入力値は無視する旨を表示する。
-                System.out.println("最後の数値は無視します。");
+                //初回入力ではないことを判定する。
+                if (inputTimes != START_VALUE) {
+                    //1000を超えたことをアナウンスする。
+                    System.out.println("合計が" + UPPER_LIMIT + "を超えました。");
+                    //最後の入力値は無視する旨を表示する。
+                    System.out.println("最後の数値は無視します。");
+                }
                 //処理を抜ける。
                 break;
             }
@@ -69,9 +67,16 @@ public class e_04_25_02 {
             //入力回数をインクリメントする。
             inputTimes++;
         }
-        //平均値を算出する。
-        double averageValue = ((double) sumTotal / inputTimes);
-        //合計値および平均値を表示する。
-        System.out.println("合計は" + sumTotal + "です。\n平均は" + averageValue + "です。");
+        //初回入力ではない場合、
+        if (inputTimes != START_VALUE) {
+            //平均値を算出する。
+            double averageValue = ((double) sumTotal / inputTimes);
+            //合計値および平均値を表示する。
+            System.out.println("合計は" + sumTotal + "で、平均は" + averageValue + "です。");
+            //初回入力の場合、
+        } else {
+            //入力値が上限を超えている旨を表示する。
+            System.out.println("入力値が" + UPPER_LIMIT + "を超えているので計算しません。");
+        }
     }
 }
