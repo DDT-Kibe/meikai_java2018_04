@@ -38,9 +38,9 @@ public class e_04_27 {
 
         //ラベル設定する。
         Game:
-        //無限ループでゲームを行う。
-        while (true) {
-            //入力回数が制限回数と等しくなった場合
+        //ゲーム処理を行う。
+        do {
+            //入力回数が制限回数と等しくなった場合、
             if (inputTimes == LIMIT_TIMES) {
                 //正解を表示する。
                 System.out.println("正解は" + questionNumber + "でした。\nゲームを終了します。");
@@ -68,6 +68,7 @@ public class e_04_27 {
                 //Gameラベルを抜け処理を終了する。
                 break Game;
             }
-        }
+            //入力回数が制限回数以下ならゲーム処理を繰り返す。
+        } while (inputTimes <= LIMIT_TIMES);
     }
 }
