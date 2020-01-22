@@ -29,14 +29,12 @@ public class e_06_04 {
         //最下段に剰余を表示する際の計算で使用する値。
         final int INDEX_DIVISION_VALUE = 10;
 
-        //乱数を生成する用意をする。
-        Random makingNumber = new Random();
         //キーボードからの入力を受け取る用意をする。
         Scanner inKeyboard = new Scanner(System.in);
         //入力値を代入する変数を用意をする。
         int totalElements;
 
-        //入力値が正の整数であるかを判定する。
+        //入力値が妥当かを判定する。
         do {
             //タイトルを表示し入力を促す。
             System.out.print("要素数：");
@@ -53,6 +51,8 @@ public class e_06_04 {
         //配列を生成する。
         int[] arrayNumbers = new int[totalElements];
 
+        //乱数を生成する用意をする。
+        Random makingNumber = new Random();
         //要素数分の乱数を生成する。
         for (int countElement = ELEMENT_START_VALUE; countElement < totalElements; countElement++) {
             //生成した乱数を要素に代入する。
